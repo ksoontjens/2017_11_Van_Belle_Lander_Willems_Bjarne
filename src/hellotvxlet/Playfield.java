@@ -49,7 +49,10 @@ public class Playfield extends HComponent implements UserEventListener {
     public void run()
     {
         SlangSegment s=new SlangSegment();
-        if (r==1) hx=hx+10;
+        if (r==1) hx = hx+10;   //rechts
+        else if (r==2) hy = hy+10;  //onder
+        else if (r==3) hx = hx-10;  //links
+        else if (r==4) hy = hy-10;  //boven
         s.x=hx;
         s.y=hy;
   
@@ -57,7 +60,19 @@ public class Playfield extends HComponent implements UserEventListener {
         this.repaint();
     }
     public void userEventReceived(UserEvent e) {
-  
-}
+        if(e.getCode() == HRcEvent.VK_LEFT && r!=1){
+            r = 3;
+        }
+        else if(e.getCode() == HRcEvent.VK_RIGHT && r!=3){
+            r = 1;
+        }
+        else if(e.getCode() == HRcEvent.VK_UP && r!=2){
+            r = 4;
+        }
+        else if(e.getCode() == HRcEvent.VK_DOWN && r!=4){
+            r = 2;
+        }
+        
+    }
 }
 

@@ -1,10 +1,10 @@
 Signature-Version: 1.0
 Created-By: 1.6.0_16 (Sun Microsystems Inc.)
 BDJ-Signature-Version: 1.0
-SHA1-Digest-Manifest: 2u1+HcHhvK8tseB/u2t8h8Wwimg=
+SHA1-Digest-Manifest: 8MtY1UNhClMTL2bmSrrZgUDJObc=
 
 Name: hellotvxlet/HelloTVXlet.class
-SHA1-Digest: ZdJylhtpzc8ZEgF1P64mdKP01Dg=
+SHA1-Digest: DILaYL7hgUCrWDUTVHMgbrD6ayk=
 
 Name: hellotvxlet/SlangSegment.class
 SHA1-Digest: Vh08CplYpQutMjtNz1oLHEwDfkY=
@@ -13,7 +13,7 @@ Name: hellotvxlet/ChessBoard.class
 SHA1-Digest: hKns70l2LGu46Zv0wwI0Mx+G2GE=
 
 Name: hellotvxlet/Playfield.class
-SHA1-Digest: 2Eru7yvIRzwXc71+wF7Yv7p5HoY=
+SHA1-Digest: CfPFVasQSYhuWj9GSc4hfCw5sY4=
 
 Name: hellotvxlet/bluray.HelloTVXlet.perm
 SHA1-Digest: 84ZO/rYCyy0JStmaLbg1GDVEFhQ=
