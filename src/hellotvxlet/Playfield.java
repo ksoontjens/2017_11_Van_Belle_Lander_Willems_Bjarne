@@ -30,6 +30,11 @@ public class Playfield extends HComponent implements UserEventListener {
     Graphics apple;
     SlangSegment s;
     boolean hasCollided = false;
+    int maxWidth = 720;
+    int maxHeight = 576;
+    boolean paintApple = true;
+    int randX;
+    int randY;
     
     public Playfield()
     {
@@ -51,6 +56,12 @@ public class Playfield extends HComponent implements UserEventListener {
             g.fillOval(s.x,s.y , 10, 10);
                         
         }
+        if(paintApple){
+            randX =  (int) (Math.floor( (Math.random() * (maxWidth/10)))*10);
+            randY =  (int) (Math.floor(Math.random()*(maxHeight/10))*10);   
+        }
+        paintApples(g);
+        
         
         
     }
@@ -117,14 +128,15 @@ public class Playfield extends HComponent implements UserEventListener {
         }
     }
     public void checkCollision(){
-        
+        int xCoordHead = s.x;
+        int yCoordHead = s.y;
         for (int i=0;i<slang.size();i++)
         {   
             
             int xCoordSlangDeel = ((SlangSegment)(slang.get(i))).x;
-            int xCoordHead = s.x;
+            
             int yCoordSlangDeel = ((SlangSegment)(slang.get(i))).y;
-            int yCoordHead = s.y;
+            
             
             
             if(xCoordSlangDeel == xCoordHead && yCoordSlangDeel == yCoordHead ){
@@ -136,6 +148,19 @@ public class Playfield extends HComponent implements UserEventListener {
             }
             
         }
+        if(xCoordHead == randX && yCoordHead == randY){
+            paintApple = true;
+            length ++;
+        }
+    }
+    
+    public void paintApples (Graphics g){
+            g.setColor(Color.RED);
+            g.fillOval(randX,randY , 10, 10);
+            paintApple = false;
+    }
+    
+    public void CheckAppleCollision(){
         
     }
 }

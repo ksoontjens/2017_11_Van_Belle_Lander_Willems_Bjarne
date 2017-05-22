@@ -28,7 +28,7 @@ public class HelloTVXlet implements Xlet, HActionListener {
         EventManager man=EventManager.getInstance();
         man.addUserEventListener(bord, repo);
         System.out.println(repo);
-      scene.add(bord);
+        scene.add(bord);
       scene.validate();
       scene.setVisible(true);
 
