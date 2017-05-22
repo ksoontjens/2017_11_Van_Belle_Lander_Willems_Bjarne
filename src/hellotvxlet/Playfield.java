@@ -13,6 +13,7 @@ import org.bluray.ui.event.HRcEvent;
 import org.dvb.event.UserEvent;
 import org.dvb.event.UserEventListener;
 import org.dvb.event.UserEventRepository;
+import org.dvb.ui.DVBColor;
 import org.havi.ui.HComponent;
 
 
@@ -45,11 +46,12 @@ public class Playfield extends HComponent implements UserEventListener {
     
     public void paint(Graphics g)
     {
-        
+        g.setColor(new DVBColor(191,227,87,255));
+        g.fillRect(0, 0, maxWidth, maxHeight);
         
         for (int i=0;i<slang.size();i++)
         {
-            g.setColor(Color.GREEN);
+            g.setColor(Color.BLACK);
             s=new SlangSegment();
             s=(SlangSegment)slang.get(i);
             
