@@ -43,7 +43,7 @@ public class HelloTVXlet implements Xlet, HActionListener {
            MijnTimerTask mtt=new MijnTimerTask();
            mtt.setCB(this);
            Timer t=new Timer();
-           t.scheduleAtFixedRate(mtt, 0, 500);
+           t.scheduleAtFixedRate(mtt, 0, 250);
            
     }
 
